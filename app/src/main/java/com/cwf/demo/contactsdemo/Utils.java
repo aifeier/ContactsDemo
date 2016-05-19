@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -23,6 +24,15 @@ import java.util.List;
  * @email 237142681@qq.com
  */
 public class Utils {
+
+    /*拨打电话*/
+    public static void call(Context context, String phoneNumber) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + phoneNumber));
+        context.startActivity(intent);
+    }
+
     // ----------------得到本地联系人信息-------------------------------------
     public static List<ContactsInfo> getLocalContactsInfos(Context context) {
         List<ContactsInfo> localList = new ArrayList<>();
