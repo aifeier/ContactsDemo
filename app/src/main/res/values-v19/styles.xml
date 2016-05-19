@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Status Bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Navigation Bar -->
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>
